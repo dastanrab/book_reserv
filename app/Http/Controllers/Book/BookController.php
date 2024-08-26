@@ -22,16 +22,14 @@ class BookController extends Controller
 {
     try {
        $book=Book::query()->create($request->only(['title','writer_id']));
-        if ($request->has('images')) {
-            foreach ($request->file('images') as $image) {
+       foreach ($request->file('images') as $image)
+       {
                 $filename = $image->store('blogs', 'public');
                 $bookImage = new BookImage();
                 $bookImage->url = $filename;
                 $bookImage->book_id = $book->id;
                 $bookImage->save();
-
-            }
-        }
+       }
         $categories=Category::query()->whereIn('id',$request->input('categories'))->get()->pluck('id')->toArray();
         if (count($categories)>0)
         {
@@ -51,19 +49,18 @@ class BookController extends Controller
             if ($book)
             {
                 $book->update($request->only(['title','writer_id']));
-                if ($request->has('images')) {
-                    foreach ($request->file('images') as $image) {
+                foreach ($request->file('images') as $image)
+                {
                         $filename = $image->store('blogs', 'public');
                         $bookImage = new BookImage();
                         $bookImage->url = $filename;
                         $bookImage->book_id = $book->id;
                         $bookImage->save();
-                    }
                 }
                 $categories=Category::query()->whereIn('id',$request->input('categories'))->get()->pluck('id')->toArray();
                 if (count($categories)>0)
                 {
-                    $book->categories()->syncWithoutDetaching($categories);
+                    $book->categories()->sync($categories);
                 }
                 return apiResponseStandard(data: $book->refresh(), message: 'کتاب با موفقیت ایجاد شد', statusCode: 200);
             }

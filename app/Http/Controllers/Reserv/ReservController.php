@@ -45,4 +45,21 @@ class ReservController extends Controller
             return apiResponseStandard(message: 'خطا در رزرو کتاب', statusCode: 500);
         }
     }
+    public function search(Request $request)
+    {
+        $fields=$request->all();
+        $blogs = Book::query()->with(['images','writer','categories']);
+        return $blogs
+            ->when(isset($fields['title']) && filled($fields['title']), function ($query) use ($fields) {
+                $query->Where('title','like','%'.$fields['title'].'%');
+            })
+            ->when(isset($fields['writer']), function ($query) use ($fields) {
+                $query->whereIn('writer_id',$fields['writer']);
+            })
+            ->when(isset($fields['categories']) && filled($fields['categories'] ) && is_array($fields['categories']), function ($query) use ($fields) {
+                $query->whereHas('categories', function($q) use ($fields) {
+                    $q->whereIn('categories.id', $fields['categories']);
+                });;
+            })->orderBy('id','desc')->get();
+    }
 }
