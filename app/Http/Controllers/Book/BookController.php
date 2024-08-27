@@ -51,6 +51,7 @@ class BookController extends Controller
         try {
             DB::beginTransaction();
             $book->update($request->only(['title','writer_id']));
+            $book->images()->delete();
             foreach ($request->file('images') as $image)
             {
                 $filename = $image->store('blogs', 'public');
@@ -64,6 +65,7 @@ class BookController extends Controller
             {
                 $book->categories()->sync($categories);
             }
+            DB::commit();
             return apiResponseStandard(data: $book->refresh(), message: 'کتاب با موفقیت ایجاد شد', statusCode: 200);
         }catch (\Exception $exception){
             DB::rollBack();

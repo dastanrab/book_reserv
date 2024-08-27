@@ -19,7 +19,7 @@ class ReservController extends Controller
     public function index()
     {
         try {
-            $reserved_book=BookReserv::query()->select(['user_id','book_id','reserv_end_at'])->where('user_id',auth()->id())->where('status',1)->with('book')->get();
+            $reserved_book=BookReserv::query()->select(['user_id','book_id','reserv_end_at','status'])->where('user_id',auth()->id())->where('status',1)->with('book')->get();
             return apiResponseStandard(data: ReservBookResource::collection($reserved_book), message: 'لیست کتاب های رزرو شده');
         }catch (\Exception $exception)
         {

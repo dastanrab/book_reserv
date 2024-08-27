@@ -19,7 +19,8 @@ class ReservBookResource extends JsonResource
             'book_id'=>$this->book_id,
             'book_title'=>$this->book->title,
             'reserv_end_at'=>$this->reserv_end_at,
-            'reserver fullname'=>Auth()->user()->first_name.' '.Auth()->user()->last_name
+            'reserver fullname'=>@Auth()->user()->first_name.' '.@Auth()->user()->last_name,
+            'reserv_status'=>$this->status
         ];
     }
 }
