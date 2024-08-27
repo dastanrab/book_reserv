@@ -1,0 +1,2467 @@
+{
+	"info": {
+		"_postman_id": "535e7737-7b2d-49ab-91d5-845bf93c8dd8",
+		"name": "reserv book",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17936232",
+		"_collection_link": "https://planetary-crater-891268.postman.co/workspace/My-Workspace~cd8819c3-c55b-4f11-878a-8e84fde146d6/collection/17936232-535e7737-7b2d-49ab-91d5-845bf93c8dd8?action=share&source=collection_link&creator=17936232"
+	},
+	"item": [
+		{
+			"name": "admin",
+			"item": [
+				{
+					"name": "writer",
+					"item": [
+						{
+							"name": "store",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {}
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "3|hwRHMNceXSx569GxKq2GXWxkkqpPbFfZKqJAmj7w521dfee0",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"first_name\":\"زویا\",\"last_name\":\"پیرزاد\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "127.0.0.1:8000/api/admin/writers",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"admin",
+										"writers"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "422 sample",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text",
+												"disabled": true
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "first_name",
+													"value": "مهدی",
+													"type": "text"
+												},
+												{
+													"key": "last_name",
+													"value": "اخوان ثالث",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "127.0.0.1:8000/api/admin/writers",
+											"host": [
+												"127",
+												"0",
+												"0",
+												"1"
+											],
+											"port": "8000",
+											"path": [
+												"api",
+												"admin",
+												"writers"
+											]
+										}
+									},
+									"status": "Unprocessable Content",
+									"code": 422,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "127.0.0.1:8000"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 26 Aug 2024 08:59:48 GMT"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 26 Aug 2024 08:59:48 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.9"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"message\": \"خطا در داده های ورودی\",\n    \"errors\": {\n        \"slug\": [\n            \"The slug has already been taken.\"\n        ]\n    },\n    \"data\": [],\n    \"status\": 422\n}"
+								},
+								{
+									"name": "200 sample",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text",
+												"disabled": true
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "first_name",
+													"value": "نیما",
+													"type": "text"
+												},
+												{
+													"key": "last_name",
+													"value": "یوشیج",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "127.0.0.1:8000/api/admin/writers",
+											"host": [
+												"127",
+												"0",
+												"0",
+												"1"
+											],
+											"port": "8000",
+											"path": [
+												"api",
+												"admin",
+												"writers"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "127.0.0.1:8000"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 26 Aug 2024 09:10:04 GMT"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 26 Aug 2024 09:10:04 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.9"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"message\": \"نویسنده با موفقیت ایجاد شد\",\n    \"errors\": [],\n    \"data\": {\n        \"first_name\": \"نیما\",\n        \"last_name\": \"یوشیج\",\n        \"slug\": \"نیما-یوشیج\",\n        \"updated_at\": \"2024-08-26T09:10:04.000000Z\",\n        \"created_at\": \"2024-08-26T09:10:04.000000Z\",\n        \"id\": 4\n    },\n    \"status\": 200\n}"
+								}
+							]
+						},
+						{
+							"name": "index",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "3|hwRHMNceXSx569GxKq2GXWxkkqpPbFfZKqJAmj7w521dfee0",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "127.0.0.1:8000/api/admin/writers",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"admin",
+										"writers"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "200 sample",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "127.0.0.1:8000/api/admin/writers",
+											"host": [
+												"127",
+												"0",
+												"0",
+												"1"
+											],
+											"port": "8000",
+											"path": [
+												"api",
+												"admin",
+												"writers"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "127.0.0.1:8000"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 26 Aug 2024 09:11:54 GMT"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 26 Aug 2024 09:11:54 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.9"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"message\": \"لیست نویسنده ها\",\n    \"errors\": [],\n    \"data\": [\n        {\n            \"id\": 3,\n            \"created_at\": \"2024-08-26T08:59:43.000000Z\",\n            \"updated_at\": \"2024-08-26T08:59:43.000000Z\",\n            \"first_name\": \"مهدی\",\n            \"last_name\": \"اخوان ثالث\",\n            \"slug\": \"مهدی-اخوان-ثالث\"\n        },\n        {\n            \"id\": 4,\n            \"created_at\": \"2024-08-26T09:10:04.000000Z\",\n            \"updated_at\": \"2024-08-26T09:10:04.000000Z\",\n            \"first_name\": \"نیما\",\n            \"last_name\": \"یوشیج\",\n            \"slug\": \"نیما-یوشیج\"\n        }\n    ],\n    \"status\": 200\n}"
+								}
+							]
+						},
+						{
+							"name": "update",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {}
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "3|hwRHMNceXSx569GxKq2GXWxkkqpPbFfZKqJAmj7w521dfee0",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"first_name\":\"مهدیی\",\"last_name\":\"اخوان ثالث\"}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "127.0.0.1:8000/api/admin/writers/3",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"admin",
+										"writers",
+										"3"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "422 sample",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\"first_name\":\"مهدیی\",\"last_name\":\"اخوان ثالث\"}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "127.0.0.1:8000/api/admin/writers/3",
+											"host": [
+												"127",
+												"0",
+												"0",
+												"1"
+											],
+											"port": "8000",
+											"path": [
+												"api",
+												"admin",
+												"writers",
+												"3"
+											]
+										}
+									},
+									"status": "Unprocessable Content",
+									"code": 422,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "127.0.0.1:8000"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 26 Aug 2024 09:22:30 GMT"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 26 Aug 2024 09:22:30 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.9"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"message\": \"خطا در داده های ورودی\",\n    \"errors\": {\n        \"slug\": [\n            \"The slug has already been taken.\"\n        ]\n    },\n    \"data\": [],\n    \"status\": 422\n}"
+								}
+							]
+						},
+						{
+							"name": "delete",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "3|hwRHMNceXSx569GxKq2GXWxkkqpPbFfZKqJAmj7w521dfee0",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "127.0.0.1:8000/api/admin/writers/3",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"admin",
+										"writers",
+										"3"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "200 sample",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "127.0.0.1:8000/api/admin/writers/3",
+											"host": [
+												"127",
+												"0",
+												"0",
+												"1"
+											],
+											"port": "8000",
+											"path": [
+												"api",
+												"admin",
+												"writers",
+												"3"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "127.0.0.1:8000"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 26 Aug 2024 09:24:19 GMT"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 26 Aug 2024 09:24:19 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.9"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"message\": \"نویسنده با موفقیت حذف شد\",\n    \"errors\": [],\n    \"data\": {\n        \"id\": 3,\n        \"created_at\": \"2024-08-26T08:59:43.000000Z\",\n        \"updated_at\": \"2024-08-26T09:22:22.000000Z\",\n        \"first_name\": \"مهدیی\",\n        \"last_name\": \"اخوان ثالث\",\n        \"slug\": \"مهدیی-اخوان-ثالث\"\n    },\n    \"status\": 200\n}"
+								},
+								{
+									"name": "404 sample",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "127.0.0.1:8000/api/admin/writers/3",
+											"host": [
+												"127",
+												"0",
+												"0",
+												"1"
+											],
+											"port": "8000",
+											"path": [
+												"api",
+												"admin",
+												"writers",
+												"3"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "127.0.0.1:8000"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 26 Aug 2024 09:24:42 GMT"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 26 Aug 2024 09:24:42 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.9"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"message\": \"نویسنده ای پیدا نشد\",\n    \"errors\": [],\n    \"data\": null,\n    \"status\": 404\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "category",
+					"item": [
+						{
+							"name": "story",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "3|hwRHMNceXSx569GxKq2GXWxkkqpPbFfZKqJAmj7w521dfee0",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "علمی تخیلی",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "127.0.0.1:8000/api/admin/categories",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"admin",
+										"categories"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "200 sample",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "title",
+													"value": "تخیلی",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "127.0.0.1:8000/api/admin/categories",
+											"host": [
+												"127",
+												"0",
+												"0",
+												"1"
+											],
+											"port": "8000",
+											"path": [
+												"api",
+												"admin",
+												"categories"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "127.0.0.1:8000"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 26 Aug 2024 09:53:58 GMT"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 26 Aug 2024 09:53:58 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.9"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"message\": \"دسته بندی با موفقیت ایجاد شد\",\n    \"errors\": [],\n    \"data\": {\n        \"title\": \"تخیلی\",\n        \"slug\": \"تخیلی\",\n        \"updated_at\": \"2024-08-26T09:53:58.000000Z\",\n        \"created_at\": \"2024-08-26T09:53:58.000000Z\",\n        \"id\": 1\n    },\n    \"status\": 200\n}"
+								}
+							]
+						},
+						{
+							"name": "index",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "3|hwRHMNceXSx569GxKq2GXWxkkqpPbFfZKqJAmj7w521dfee0",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "127.0.0.1:8000/api/admin/categories",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"admin",
+										"categories"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "200 SAMPLE",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "127.0.0.1:8000/api/admin/categories",
+											"host": [
+												"127",
+												"0",
+												"0",
+												"1"
+											],
+											"port": "8000",
+											"path": [
+												"api",
+												"admin",
+												"categories"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "127.0.0.1:8000"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 26 Aug 2024 09:55:29 GMT"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 26 Aug 2024 09:55:29 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.9"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"message\": \"لیست نویسنده ها\",\n    \"errors\": [],\n    \"data\": [\n        {\n            \"id\": 1,\n            \"created_at\": \"2024-08-26T09:53:58.000000Z\",\n            \"updated_at\": \"2024-08-26T09:53:58.000000Z\",\n            \"title\": \"تخیلی\",\n            \"slug\": \"تخیلی\"\n        }\n    ],\n    \"status\": 200\n}"
+								}
+							]
+						},
+						{
+							"name": "update",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "3|hwRHMNceXSx569GxKq2GXWxkkqpPbFfZKqJAmj7w521dfee0",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\":\"درام\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "127.0.0.1:8000/api/admin/categories/1",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"admin",
+										"categories",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "3|hwRHMNceXSx569GxKq2GXWxkkqpPbFfZKqJAmj7w521dfee0",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "127.0.0.1:8000/api/admin/categories/1",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"admin",
+										"categories",
+										"1"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "403 sample",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "127.0.0.1:8000/api/admin/categories/3",
+											"host": [
+												"127",
+												"0",
+												"0",
+												"1"
+											],
+											"port": "8000",
+											"path": [
+												"api",
+												"admin",
+												"categories",
+												"3"
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "127.0.0.1:8000"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 27 Aug 2024 14:53:36 GMT"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 27 Aug 2024 14:53:36 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.9"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"message\": \"این دسته بندی توسط کتاب استفاده شده و قادر به حذف نیستید\",\n    \"errors\": [],\n    \"data\": null,\n    \"status\": 403\n}"
+								},
+								{
+									"name": "200 sample",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "127.0.0.1:8000/api/admin/categories/3",
+											"host": [
+												"127",
+												"0",
+												"0",
+												"1"
+											],
+											"port": "8000",
+											"path": [
+												"api",
+												"admin",
+												"categories",
+												"3"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "127.0.0.1:8000"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 27 Aug 2024 14:56:16 GMT"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 27 Aug 2024 14:56:16 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.9"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"message\": \"دسته بندی با موفقیت حذف شد\",\n    \"errors\": [],\n    \"data\": {\n        \"id\": 3,\n        \"title\": \"درام\",\n        \"slug\": \"درام\",\n        \"created_at\": \"2024-08-27T14:20:27.000000Z\",\n        \"updated_at\": \"2024-08-27T14:20:27.000000Z\"\n    },\n    \"status\": 200\n}"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "first_name",
+									"value": "salman",
+									"type": "text"
+								},
+								{
+									"key": "last_name",
+									"value": "rajabi",
+									"type": "text"
+								},
+								{
+									"key": "role",
+									"value": "admin",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "tabankhorshid8@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "127.0.0.1:8000/api/auth/register",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "422 sample",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "first_name",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "last_name",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "role",
+											"value": "admin",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "127.0.0.1:8000/api/auth/register",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"auth",
+										"register"
+									]
+								}
+							},
+							"status": "Unprocessable Content",
+							"code": 422,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 26 Aug 2024 06:08:26 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 26 Aug 2024 06:08:26 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.9"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"خطا در داده های ورودی\",\n    \"errors\": {\n        \"first_name\": [\n            \"The first name field is required.\"\n        ],\n        \"last_name\": [\n            \"The last name field is required.\"\n        ],\n        \"role\": [\n            \"The role field is required.\"\n        ],\n        \"password\": [\n            \"The password field is required.\"\n        ],\n        \"email\": [\n            \"The email field is required.\"\n        ]\n    },\n    \"data\": [],\n    \"status\": 422\n}"
+						},
+						{
+							"name": "200 sample",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "first_name",
+											"value": "salman",
+											"type": "text"
+										},
+										{
+											"key": "last_name",
+											"value": "rajabi",
+											"type": "text"
+										},
+										{
+											"key": "role",
+											"value": "admin",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "tabankhorshid8@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "12345",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "127.0.0.1:8000/api/auth/register",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"auth",
+										"register"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 26 Aug 2024 06:27:01 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 26 Aug 2024 06:27:01 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.9"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"ثبت نام با موفقیت انجام شد\",\n    \"errors\": [],\n    \"data\": {\n        \"token\": \"2|l8dAnHaTc87qCHCOf7Lx1MCGlNTzb5z7NN8Qnhrn7d11e595\"\n    },\n    \"status\": 200\n}"
+						}
+					]
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "tabankhorshid8@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123466",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "127.0.0.1:8000/api/auth/login",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 sample",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "tabankhorshid8@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "12345",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "127.0.0.1:8000/api/auth/login",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 26 Aug 2024 06:29:36 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 26 Aug 2024 06:29:36 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.9"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"ورود با موفقیت انجام شد\",\n    \"errors\": [],\n    \"data\": {\n        \"token\": \"3|hwRHMNceXSx569GxKq2GXWxkkqpPbFfZKqJAmj7w521dfee0\"\n    },\n    \"status\": 200\n}"
+						},
+						{
+							"name": "401 sample",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "tabankhorshid8@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "123466",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "127.0.0.1:8000/api/auth/login",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 26 Aug 2024 06:30:08 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 26 Aug 2024 06:30:08 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.9"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"اطلاعات ثبت نام نامعتبر است\",\n    \"errors\": [],\n    \"data\": [],\n    \"status\": 401\n}"
+						},
+						{
+							"name": "422 sample",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "tabankhorshid8@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "123466",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "127.0.0.1:8000/api/auth/login",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "Unprocessable Content",
+							"code": 422,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 26 Aug 2024 06:30:24 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 26 Aug 2024 06:30:24 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.9"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"خطا در داده های ورودی\",\n    \"errors\": {\n        \"password\": [\n            \"The password field is required.\"\n        ]\n    },\n    \"data\": [],\n    \"status\": 422\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "book",
+			"item": [
+				{
+					"name": "store",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "1|QSxUvNJgrY8nAM3cwzFfw9F4fdg5famd0CF8Dn1z29c224bd",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "عادت میکنیم",
+									"type": "text"
+								},
+								{
+									"key": "categories[]",
+									"value": "3",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "images[]",
+									"type": "file",
+									"src": "/C:/Users/Pc/Downloads/1685814488765.jpg"
+								},
+								{
+									"key": "images[]",
+									"type": "file",
+									"src": "/C:/Users/Pc/Downloads/aks-shahid-soleimani-www.Ziaossalehin.ir-3-n.jpg"
+								},
+								{
+									"key": "writer_id",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "categories[]",
+									"value": "2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "127.0.0.1:8000/api/admin/books/7",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"admin",
+								"books",
+								"7"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 sample",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "عادت میکنیم",
+											"type": "text"
+										},
+										{
+											"key": "categories[]",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "images[]",
+											"type": "file",
+											"src": "/C:/Users/Pc/Downloads/1685814488765.jpg"
+										},
+										{
+											"key": "images[]",
+											"type": "file",
+											"src": "/C:/Users/Pc/Downloads/aks-shahid-soleimani-www.Ziaossalehin.ir-3-n.jpg"
+										},
+										{
+											"key": "writer_id",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "categories[]",
+											"value": "2",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "127.0.0.1:8000/api/admin/books",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"admin",
+										"books"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 Aug 2024 13:43:14 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 Aug 2024 13:43:14 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.9"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"کتاب با موفقیت ایجاد شد\",\n    \"errors\": [],\n    \"data\": {\n        \"id\": 6,\n        \"title\": \"عادت میکنیم\",\n        \"reserved\": 0,\n        \"writer_id\": 1,\n        \"created_at\": \"2024-08-27T13:43:14.000000Z\",\n        \"updated_at\": \"2024-08-27T13:43:14.000000Z\"\n    },\n    \"status\": 200\n}"
+						}
+					]
+				},
+				{
+					"name": "update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "1|9mGuD0cazuJ8yQ8HR9LODsjt6A770twrMZh7kKQHc3b54adb",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "عادت میکنیم",
+									"type": "text"
+								},
+								{
+									"key": "categories[]",
+									"value": "3",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "images[]",
+									"type": "file",
+									"src": "/C:/Users/Pc/Downloads/1685814488765.jpg"
+								},
+								{
+									"key": "images[]",
+									"type": "file",
+									"src": "/C:/Users/Pc/Downloads/aks-shahid-soleimani-www.Ziaossalehin.ir-3-n.jpg"
+								},
+								{
+									"key": "writer_id",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "categories[]",
+									"value": "3",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "127.0.0.1:8000/api/admin/books/7?_method=PUT",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"admin",
+								"books",
+								"7"
+							],
+							"query": [
+								{
+									"key": "_method",
+									"value": "PUT"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 sample",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "عادت میکنیم",
+											"type": "text"
+										},
+										{
+											"key": "categories[]",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "images[]",
+											"type": "file",
+											"src": "/C:/Users/Pc/Downloads/1685814488765.jpg"
+										},
+										{
+											"key": "images[]",
+											"type": "file",
+											"src": "/C:/Users/Pc/Downloads/aks-shahid-soleimani-www.Ziaossalehin.ir-3-n.jpg"
+										},
+										{
+											"key": "writer_id",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "categories[]",
+											"value": "2",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "127.0.0.1:8000/api/admin/books",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"admin",
+										"books"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 Aug 2024 13:43:14 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 Aug 2024 13:43:14 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.9"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"کتاب با موفقیت ایجاد شد\",\n    \"errors\": [],\n    \"data\": {\n        \"id\": 6,\n        \"title\": \"عادت میکنیم\",\n        \"reserved\": 0,\n        \"writer_id\": 1,\n        \"created_at\": \"2024-08-27T13:43:14.000000Z\",\n        \"updated_at\": \"2024-08-27T13:43:14.000000Z\"\n    },\n    \"status\": 200\n}"
+						}
+					]
+				},
+				{
+					"name": "index",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "1|QSxUvNJgrY8nAM3cwzFfw9F4fdg5famd0CF8Dn1z29c224bd",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "127.0.0.1:8000/api/admin/books",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"admin",
+								"books"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 sample",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "127.0.0.1:8000/api/admin/books",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"admin",
+										"books"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 Aug 2024 13:43:57 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 Aug 2024 13:43:57 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.9"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"لیست نویسنده ها\",\n    \"errors\": [],\n    \"data\": [\n        {\n            \"id\": 5,\n            \"title\": \"چراغ ها را من خاموش میکنم\",\n            \"reserved\": 1,\n            \"writer_id\": 1,\n            \"created_at\": \"2024-08-27T13:37:17.000000Z\",\n            \"updated_at\": \"2024-08-27T13:41:15.000000Z\",\n            \"writer\": {\n                \"id\": 1,\n                \"first_name\": \"زویا\",\n                \"last_name\": \"پیرزاد\",\n                \"slug\": \"زویا-پیرزاد\",\n                \"created_at\": \"2024-08-27T13:07:38.000000Z\",\n                \"updated_at\": \"2024-08-27T13:07:38.000000Z\"\n            },\n            \"images\": [\n                {\n                    \"id\": 5,\n                    \"url\": \"blogs/iKcTBl6q8q7y3vzGV23WYrK75jBRMrlyMPU9KAeJ.jpg\",\n                    \"book_id\": 5,\n                    \"created_at\": \"2024-08-27T13:37:17.000000Z\",\n                    \"updated_at\": \"2024-08-27T13:37:17.000000Z\"\n                },\n                {\n                    \"id\": 6,\n                    \"url\": \"blogs/bER6HqOGEXEvaaDXRo8iWaTUBrPr2ENeYMh8Y2rQ.jpg\",\n                    \"book_id\": 5,\n                    \"created_at\": \"2024-08-27T13:37:17.000000Z\",\n                    \"updated_at\": \"2024-08-27T13:37:17.000000Z\"\n                }\n            ],\n            \"categories\": [\n                {\n                    \"id\": 1,\n                    \"title\": \"علمی تخیلی\",\n                    \"slug\": \"علمی-تخیلی\",\n                    \"created_at\": \"2024-08-27T13:08:34.000000Z\",\n                    \"updated_at\": \"2024-08-27T13:08:34.000000Z\"\n                }\n            ]\n        },\n        {\n            \"id\": 6,\n            \"title\": \"عادت میکنیم\",\n            \"reserved\": 0,\n            \"writer_id\": 1,\n            \"created_at\": \"2024-08-27T13:43:14.000000Z\",\n            \"updated_at\": \"2024-08-27T13:43:14.000000Z\",\n            \"writer\": {\n                \"id\": 1,\n                \"first_name\": \"زویا\",\n                \"last_name\": \"پیرزاد\",\n                \"slug\": \"زویا-پیرزاد\",\n                \"created_at\": \"2024-08-27T13:07:38.000000Z\",\n                \"updated_at\": \"2024-08-27T13:07:38.000000Z\"\n            },\n            \"images\": [\n                {\n                    \"id\": 7,\n                    \"url\": \"blogs/UtPDI7MpxZqc0uJFJTAcOYCTS1BnEE7N8S6Bw4eS.jpg\",\n                    \"book_id\": 6,\n                    \"created_at\": \"2024-08-27T13:43:14.000000Z\",\n                    \"updated_at\": \"2024-08-27T13:43:14.000000Z\"\n                },\n                {\n                    \"id\": 8,\n                    \"url\": \"blogs/83SWumngIBYUJGixKrhtBG5PexmwpspZWPg92WIz.jpg\",\n                    \"book_id\": 6,\n                    \"created_at\": \"2024-08-27T13:43:14.000000Z\",\n                    \"updated_at\": \"2024-08-27T13:43:14.000000Z\"\n                }\n            ],\n            \"categories\": [\n                {\n                    \"id\": 1,\n                    \"title\": \"علمی تخیلی\",\n                    \"slug\": \"علمی-تخیلی\",\n                    \"created_at\": \"2024-08-27T13:08:34.000000Z\",\n                    \"updated_at\": \"2024-08-27T13:08:34.000000Z\"\n                },\n                {\n                    \"id\": 2,\n                    \"title\": \"درام\",\n                    \"slug\": \"درام\",\n                    \"created_at\": \"2024-08-27T13:42:45.000000Z\",\n                    \"updated_at\": \"2024-08-27T13:42:45.000000Z\"\n                }\n            ]\n        }\n    ],\n    \"status\": 200\n}"
+						}
+					]
+				},
+				{
+					"name": "delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "4|Xe5737XoQyNiTiBJ8Gq5mg6fy9AKqSjfVjFCXIld58a45433",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "127.0.0.1:8000/api/admin/books/8",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"admin",
+								"books",
+								"8"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "delete sample",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "127.0.0.1:8000/api/admin/books/8",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"admin",
+										"books",
+										"8"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 26 Aug 2024 16:06:47 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 26 Aug 2024 16:06:47 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.9"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"کتاب با موفقیت حذف شد\",\n    \"errors\": [],\n    \"data\": null,\n    \"status\": 200\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "reserv",
+			"item": [
+				{
+					"name": "reserv",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "1|9mGuD0cazuJ8yQ8HR9LODsjt6A770twrMZh7kKQHc3b54adb",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "book_id",
+									"value": "6",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "127.0.0.1:8000/api/reserv",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"reserv"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "422 sample",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "book_id",
+											"value": "11",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "127.0.0.1:8000/api/reserv",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"reserv"
+									]
+								}
+							},
+							"status": "Unprocessable Content",
+							"code": 422,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 Aug 2024 07:26:49 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 Aug 2024 07:26:49 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.9"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"خطا در داده های ورودی\",\n    \"errors\": {\n        \"book_id\": [\n            \"The selected book id is invalid.\"\n        ]\n    },\n    \"data\": [],\n    \"status\": 422\n}"
+						},
+						{
+							"name": "200 sample",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "book_id",
+											"value": "11",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "127.0.0.1:8000/api/reserv",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"reserv"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 Aug 2024 07:27:40 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 Aug 2024 07:27:40 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.9"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"رزرو با موفقیت انجام شد\",\n    \"errors\": [],\n    \"data\": null,\n    \"status\": 200\n}"
+						}
+					]
+				},
+				{
+					"name": "serach",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "1|QSxUvNJgrY8nAM3cwzFfw9F4fdg5famd0CF8Dn1z29c224bd",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "127.0.0.1:8000/api/reserv/search?title=عاد&categories[]=2&writer[]=2",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"reserv",
+								"search"
+							],
+							"query": [
+								{
+									"key": "title",
+									"value": "عاد"
+								},
+								{
+									"key": "categories[]",
+									"value": "2"
+								},
+								{
+									"key": "writer[]",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 sample",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "127.0.0.1:8000/api/reserv/search?categories[]=2",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"reserv",
+										"search"
+									],
+									"query": [
+										{
+											"key": "categories[]",
+											"value": "2"
+										},
+										{
+											"key": "title",
+											"value": "",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 Aug 2024 13:48:55 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 Aug 2024 13:48:55 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.9"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"\",\n    \"errors\": [],\n    \"data\": [\n        {\n            \"id\": 6,\n            \"title\": \"عادت میکنیم\",\n            \"reserved\": 1,\n            \"writer_id\": 1,\n            \"created_at\": \"2024-08-27T13:43:14.000000Z\",\n            \"updated_at\": \"2024-08-27T13:45:24.000000Z\",\n            \"images\": [\n                {\n                    \"id\": 7,\n                    \"url\": \"blogs/UtPDI7MpxZqc0uJFJTAcOYCTS1BnEE7N8S6Bw4eS.jpg\",\n                    \"book_id\": 6,\n                    \"created_at\": \"2024-08-27T13:43:14.000000Z\",\n                    \"updated_at\": \"2024-08-27T13:43:14.000000Z\"\n                },\n                {\n                    \"id\": 8,\n                    \"url\": \"blogs/83SWumngIBYUJGixKrhtBG5PexmwpspZWPg92WIz.jpg\",\n                    \"book_id\": 6,\n                    \"created_at\": \"2024-08-27T13:43:14.000000Z\",\n                    \"updated_at\": \"2024-08-27T13:43:14.000000Z\"\n                }\n            ],\n            \"writer\": {\n                \"id\": 1,\n                \"first_name\": \"زویا\",\n                \"last_name\": \"پیرزاد\",\n                \"slug\": \"زویا-پیرزاد\",\n                \"created_at\": \"2024-08-27T13:07:38.000000Z\",\n                \"updated_at\": \"2024-08-27T13:07:38.000000Z\"\n            },\n            \"categories\": [\n                {\n                    \"id\": 1,\n                    \"title\": \"علمی تخیلی\",\n                    \"slug\": \"علمی-تخیلی\",\n                    \"created_at\": \"2024-08-27T13:08:34.000000Z\",\n                    \"updated_at\": \"2024-08-27T13:08:34.000000Z\"\n                },\n                {\n                    \"id\": 2,\n                    \"title\": \"درام\",\n                    \"slug\": \"درام\",\n                    \"created_at\": \"2024-08-27T13:42:45.000000Z\",\n                    \"updated_at\": \"2024-08-27T13:42:45.000000Z\"\n                }\n            ]\n        }\n    ],\n    \"status\": 200\n}"
+						}
+					]
+				},
+				{
+					"name": "user reserved book",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "1|QSxUvNJgrY8nAM3cwzFfw9F4fdg5famd0CF8Dn1z29c224bd",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "127.0.0.1:8000/api/reserv",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"reserv"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 sample",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "127.0.0.1:8000/api/reserv",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"reserv"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 Aug 2024 13:49:52 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 Aug 2024 13:49:52 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.9"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"لیست کتاب های رزرو شده\",\n    \"errors\": [],\n    \"data\": [\n        {\n            \"book_id\": 5,\n            \"book_title\": \"چراغ ها را من خاموش میکنم\",\n            \"reserv_end_at\": \"2024-09-03\",\n            \"reserver fullname\": \"salman rajabi\"\n        },\n        {\n            \"book_id\": 6,\n            \"book_title\": \"عادت میکنیم\",\n            \"reserv_end_at\": \"2024-09-03\",\n            \"reserver fullname\": \"salman rajabi\"\n        }\n    ],\n    \"status\": 200\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
