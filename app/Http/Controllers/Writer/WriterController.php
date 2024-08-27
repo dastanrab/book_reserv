@@ -45,12 +45,17 @@ class WriterController extends Controller
     {
         try {
             $writer=Writer::query()->where('id',$writer_id)->first();
-            if ($writer)
+            if (!$writer)
             {
-                $writer->delete();
-                return apiResponseStandard(data:$writer->refresh(),message: 'نویسنده با موفقیت حذف شد');
+                return apiResponseStandard(message: 'نویسنده ای پیدا نشد',statusCode: 404);
             }
-            return apiResponseStandard(message: 'نویسنده ای پیدا نشد',statusCode: 404);
+            if ($writer->book()->count()>0)
+            {
+                return apiResponseStandard( message: 'این نویسنده توسط کتاب استفاده شده و قادر به حذف نیستید', statusCode: 403);
+            }
+            $writer->delete();
+            return apiResponseStandard(data:$writer->refresh(),message: 'نویسنده با موفقیت حذف شد');
+
 
 
         }catch (\Exception $exception){

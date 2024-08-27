@@ -18,6 +18,10 @@ class Book extends Model
     {
         return $this->hasMany(BookImage::class,'book_id','id');
     }
+    public function reserve_books()
+    {
+        return $this->hasMany(BookReserv::class,'book_id','id');
+    }
     public function writer()
     {
         return $this->belongsTo(Writer::class,'writer_id');

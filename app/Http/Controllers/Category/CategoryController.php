@@ -44,12 +44,16 @@ class CategoryController extends Controller
     {
         try {
             $category=Category::query()->where('id',$category_id)->first();
-            if ($category)
+            if (!$category)
             {
-                $category->delete();
-                return apiResponseStandard(data:$category->refresh(),message: 'دسته بندی با موفقیت حذف شد');
+                return apiResponseStandard(message: 'دسته بندی ای پیدا نشد',statusCode: 404);
             }
-            return apiResponseStandard(message: 'دسته بندی ای پیدا نشد',statusCode: 404);
+            if ($category->books()->count()>0)
+            {
+                return apiResponseStandard( message: 'این دسته بندی توسط کتاب استفاده شده و قادر به حذف نیستید', statusCode: 403);
+            }
+            $category->delete();
+            return apiResponseStandard(data:$category->refresh(),message: 'دسته بندی با موفقیت حذف شد');
         }catch (\Exception $exception){
             report($exception);
             return apiResponseStandard(data:[],message: 'خطا در حذف دسته بندی',statusCode: 500);

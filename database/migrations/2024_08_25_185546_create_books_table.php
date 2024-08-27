@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('books', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->boolean('reserved')->default(false);
+            $table->tinyInteger('reserved')->default(0);
             $table->integer('writer_id');
             $table->timestamps();
         });

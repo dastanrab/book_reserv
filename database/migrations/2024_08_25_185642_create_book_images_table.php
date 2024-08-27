@@ -13,6 +13,8 @@ return new class extends Migration
     {
         Schema::create('book_images', function (Blueprint $table) {
             $table->id();
+            $table->string('url');
+            $table->integer('book_id');
             $table->timestamps();
         });
     }

@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->integer('user_id');
             $table->integer('book_id');
+            $table->tinyInteger('status')->default(1)->comment('مشخص کننده فعال بودن یا نبودن رزرو است');
             $table->date('reserv_end_at');
             $table->timestamps();
         });

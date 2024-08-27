@@ -38,6 +38,8 @@ Route::prefix('admin')->middleware(['auth:sanctum',\App\Http\Middleware\CheckAdm
 });
 Route::prefix('reserv')->middleware('auth:sanctum')->group(function (){
     Route::post('/',[\App\Http\Controllers\Reserv\ReservController::class,'reserv']);
+    Route::get('/',[\App\Http\Controllers\Reserv\ReservController::class,'index']);
+    Route::get('search',[\App\Http\Controllers\Reserv\ReservController::class,'search']);
 });
-Route::get('search',[\App\Http\Controllers\Reserv\ReservController::class,'search']);
+
 
